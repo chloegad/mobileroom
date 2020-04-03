@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#container {
+  top: 100px;
+  width: 1200px;
+  height: 600px;
+  position: relative;
+  perspective: 600px;
+  /* half the width */
+  /*border: 2px solid lightblue;*/
+}
+#room {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-origin: 50% 80% 600px;
+  transform-style: preserve-3d;
+}
+#room figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  border: 2px solid yellow;
+  font: 400px"calibri";
+  text-align: center;
+}
+#room .n,
+.e,
+.s,
+.w { /*border: 2px solid lightblue;*/
+  width: 1196px;
+  height: 596px;
+}
+#room .n {
+  background-color: rgb(255,71,102);
+}
+#room .e {
+  background-color: rgb(255,106,77);
+}
+#room .s {
+  background-color: rgb(255,119,51);
+}
+#room .w {
+  background-color: rgb(171,39,79);
+}
+#room .t,
+.b {
+  width: 1196px;
+  height: 1196px;
+  top: -300px;
+  background-color: rgb(255,191,0);
+  
+}
+/* transform & inverse */
+
+#room .n {
+  transform: rotateY(0deg) translateZ(0px);
+}
+#room .e {
+  transform: rotateY(-90deg) translateZ(-600px) translateX(600px);
+}
+#room .s {
+  transform: rotateY(180deg) translateZ(-1200px);
+}
+#room .w {
+  transform: rotateY(90deg) translateZ(-600px) translateX(-600px);
+}
+#room .t {
+  transform: rotateX(90deg) translateZ(300px) translateY(600px);
+}
+#room .b {
+  transform: rotateX(90deg) translateZ(-300px) translateY(600px);
+}
+#room .show-n {
+  transform: translateZ(0px) rotateY(0deg);
+}
+#room .show-e {
+  transform: translateX(-600px) translateZ(600px) rotateY(90deg);
+}
+#room .show-s {
+  transform: translateZ(1200px) rotateY(180deg);
+}
+#room .show-w {
+  transform: translateX(600px) translateZ(600px) rotateY(-90deg);
+}
+#room .show-t {
+  transform: translateY(-600px) translateZ(-300px) rotateX(-90deg);
+}
+#room .show-b {
+  transform: translateY(-600px) translateZ(300px) rotateX(90deg);
+}
+#room {
+  animation: 5s hspinner;
+}
+
+.mobile{ position: absolute;
+	top:  20%;
+	left:3%;
+	z-index: 3;
+	transform: rotateZ(50deg);
+
+	
+}
+
+
+.audio{
+	
+	top: 100%; 
+	left: 5%;
+	position: absolute;
+	z-index: 0; 
+}
+
+
+
+
+@keyframes hspinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+	</style>
+</head>
+<body>
+	<div class="mobile">
+		<a href="room4.html">
+	<img src="room3.png" height="1250px" width="1590px">
+</a>
+	</div>
+	<section id="container">
+  <div id="room">
+    <figure class="n"></figure>
+    <figure class="e"></figure>
+    <figure class="s"></figure>
+    <figure class="w"></figure>
+    <figure class="t"></figure>
+    <figure class="b"></figure>
+  </div>
+</section>
+<audio controls autoplay loop class="audio">
+		 <source src="3.mp3" type="audio/mpeg">
+		 </audio>
+
+</body>
+</html>
