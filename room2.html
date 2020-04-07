@@ -107,13 +107,14 @@
 }
 
 .mobile{ position: absolute;
-	top: 70%;
-	left: 20%;
+	top: 85%;
+	left: 40%;
 	height: 50vh;
 	width: 50vw;
 	z-index: 3;
 	transform: rotateZ(-200deg);
-  
+    
+
 	
 }
 
@@ -126,7 +127,55 @@
 }
 
 
+.png{
+    position: absolute;
+  top: 39%;
+  left: 30%;
+  z-index: 1; 
+  transform: rotateZ(-220deg);
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  
+}
 
+
+.png2{
+    position: absolute;
+  top: 30%;
+  left: 15%;
+  z-index: 4; 
+  transform: rotateZ(-350deg);
+    transition-duration: 0.3s;
+
+ 
+}
+
+.png2:hover, .png2:focus, .png2:active {
+ 
+  animation-name: hvr-pulse-grow;
+ 
+  animation-duration: 3s;
+  
+  
+   
+}
+@keyframes hvr-pulse-grow {
+  to {
+ 
+    transform: scale(1.1);
+    
+  }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
 
 @keyframes hspinner {
   from {
@@ -139,6 +188,13 @@
 	</style>
 </head>
 <body>
+
+    <div class="png2">
+    <img src="room23.png" height="550px" width="650px">
+  </div>
+  <div class="png">
+    <img src="room22.png" height="350px" width="350px">
+  </div>
 	<div class="mobile">
 		<a href="room3.html">
 	<img src="room2.png" height="950px" width="1250px">

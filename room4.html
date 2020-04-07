@@ -96,10 +96,11 @@
 }
 
 .mobile{ position: absolute;
-	top:  40%;
-	left:5%;
+	top:  50%;
+	left:17%;
 	z-index: 3;
-	transform: rotateZ(-320deg);
+	transform: rotateZ(-398deg);
+   transition-duration:  0.3s; 
 }
 
 .audio{
@@ -108,6 +109,61 @@
 	left: 5%;
 	position: absolute;
 	z-index: 0; 
+}
+
+.png{
+    position: absolute;
+  top: 50%;
+  left: 32%;
+  z-index: 4; 
+  transform: rotateZ(-200deg);
+transition: all .2s ease-in-out;
+
+
+     
+}
+.png2{
+    position: absolute;
+  top: 50%;
+  left: 10%;
+  z-index: 2; 
+  transform: rotateZ(-200deg);
+  animation: mover 1s infinite  alternate;
+}
+.png3{
+    position: absolute;
+  top: 30%;
+  left: 10%;
+  z-index: 2; 
+  transform: rotateZ(-200deg);
+
+}
+.mobile:hover{
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+
+  
+   
+.png:hover { transform: scale(1.1); }
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
 }
 
 
@@ -122,8 +178,19 @@
 	</style>
 </head>
 <body>
+  <div class="png3">
+    <img src="room44.png" height="400px" width="450px">
+  </div>
+  <div class="png">
+    <img src="room42.png" height="400px" width="450px">
+  </div>
+    <div class="png2">
+    <img src="room34.png" height="400px" width="450px">
+  </div>
 	<div class="mobile">
-	<img src="room4.png" height="950px" width="1250px">
+    <a href="index.html">
+	<img src="room4.png" height="450px" width="750px">
+</a>
 	</div>
 	<section id="container">
   <div id="room">
