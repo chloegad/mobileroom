@@ -127,15 +127,41 @@
   animation-name: hvr-pulse-grow;
  
   animation-duration: 3s;
+}
   
-  
+
+.png:hover, .png:focus, .png:active {
+ 
+  animation-name: hvr-pulse-grow;
+ 
+  animation-duration: 3s;
+    
    
 }
+
+.png2:hover, .png2:focus, .png2:active {
+ 
+  animation-name: hvr-pulse-grow;
+ 
+  animation-duration: 3s;
+    
+   
+}
+
+.png3:hover, .png3:focus, .png3:active {
+ 
+  animation-name: hvr-pulse-grow;
+ 
+  animation-duration: 3s;
+    
+   
+}
+
 
 .png{
   position: absolute;
   top: 30%;
-  left: 54%;
+  left: 59%;
   z-index: 4; 
    animation-name: spinner;
          animation-timing-function: linear;
@@ -143,13 +169,14 @@
         animation-duration: 6s;
       -moz-transform-style: preserve-3d;
       opacity: 100%;
+          transition-duration: 0.3s;
 
 }
 
 .png2{
   position: absolute;
-  top: 40%;
-  left: 29%;
+  top: 39%;
+  left: 36%;
   z-index: 4; 
    animation-name: spinner;
          animation-timing-function: linear;
@@ -157,12 +184,13 @@
         animation-duration: 6s;
       -moz-transform-style: preserve-3d;
       opacity: 100%;
+          transition-duration: 0.3s;
 
 }
 .png3{
   position: absolute;
-  top: 32%;
-  left: 45%;
+  top: 35%;
+  left: 50%;
   z-index: 4; 
    animation-name: spinner;
          animation-timing-function: linear;
@@ -170,8 +198,25 @@
         animation-duration: 6s;
       -moz-transform-style: preserve-3d;
       opacity: 100%;
+          transition-duration: 0.3s;
 
 }
+
+.png4{
+  position: absolute;
+  top: 35%;
+  left: 67%;
+  z-index: 4; 
+   animation-name: spinner;
+         animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 6s;
+      -moz-transform-style: preserve-3d;
+      opacity: 100%;
+          transition-duration: 0.3s;
+
+}
+
 
 
     @keyframes spinner {
@@ -207,15 +252,15 @@ from {
 		<a href="room2.html">
 	<img src="mobile.png" height="950px" width="1250px">
 </a>
-  </div>
-<div class="png">
-  <img src="piece2.png" height="100px" width="100px">
-</div>
-<div class="png2">
-  <img src="piece2.png" height="100px" width="100px">
-</div>
-<div class="png3">
-  <img src="piece1.png" height="150px" width="150px">
+  
+
+  <img class="png"src="piece2.png" height="100px" width="100px">
+
+
+  <img  class="png2" src="piece2.png" height="100px" width="100px">
+
+  <img class="png3" src="piece1.png" height="150px" width="150px">
+   <img class="png4" src="piece1.png" height="150px" width="150px">
 </div>
 	<section id="container">
   <div id="room">
